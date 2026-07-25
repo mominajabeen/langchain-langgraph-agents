@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment variables & API keys (Crucial!)
+.env
+*.env
+
+# VS Code & IDE settings
+.vscode/
+.idea/
+
+# Tooling caches (like ruff, pytest, etc.)
+.ruff_cache/
+.pytest_cache/
