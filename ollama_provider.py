@@ -25,11 +25,11 @@ given the information {information} about a person I want you to create:
     )
 
     # Initialize Gemini (LangChain detects GEMINI_API_KEY or GOOGLE_API_KEY automatically)
-    # llm = ChatGoogleGenerativeAI(
-    #     model="gemini-2.5-flash",
-    #     temperature=0,
-    # )
-    llm = ChatOllama(temperature= 0, model = "gemma3:270m")
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        temperature=0,
+    )
+    # llm = ChatOllama(temperature= 0, model = "gemma3:270m")
 
     chain = summary_prompt_template | llm
     
