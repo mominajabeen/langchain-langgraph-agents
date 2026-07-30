@@ -2,6 +2,10 @@ from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, ToolMessage
 from langchain_core.tools import tool
 from langchain_google_genai import ChatGoogleGenerativeAI
+from tavily import TavilyClient
+
+
+tavily = TavilyClient()
 
 load_dotenv()
 
@@ -12,9 +16,11 @@ def search(query: str) -> str:
 
     Args:
         query: The search query.
+    Returns:
+        The search results
     """
     print(f"Searching for: {query}")
-    return "Tokyo weather is sunny"
+    return tavily.search(query=query)
 
 
 # Initialize with the active Gemini 2.5 Flash model
